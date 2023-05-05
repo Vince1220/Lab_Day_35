@@ -156,21 +156,72 @@ else{
 
 //2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
 //Filter
+function problemTwo(){
+    let choice;
+    choice = prompt("Enter a cuisine")
+    let results;
+    results = dishes.filter(function(el){
+        if(el.cuisine === choice){
+            return true;
+        }
+        else{
+            return false
+        }})
+
+    return results;
+}
 
 
 
 //3. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
 //Filter
+function problemThree(){
+    let results;
+    results = dishes.filter(function(el){
+        if(el.cuisine === "Italian" && el.servings > 5){
+            return true;
+        }
+        else{
+            return false
+        }})
+
+    return results;
+}
 
 
 
 //4. Create a function that will return only dishes whose id number matches their serving count.
 //Filter
 
+function problemFour(){
+    let results;
+    results = dishes.filter(function(el){
+        if(el.id === el.servings){
+            return true;
+        }
+        else{
+            return false
+        }})
+
+    return results;
+}
+
 
 
 //5. Create a function that will return only dishes whose serving count is even.
 //Filter
+function problemFive(){
+    let results;
+    results = dishes.filter(function(el){
+        if(el.servings % 2 === 0){
+            return true;
+        }
+        else{
+            return false
+        }})
+
+    return results;
+}
 
 
 
@@ -179,20 +230,54 @@ else{
 //Double Hint: Research 'javascript does array include item'
 //Filter
 
+function problemSix(){
+    let results;
+    results = dishes.filter(function(el){
+        if(el.ingredients.includes("chickpea")){
+            return true;
+        }
+        else{
+            return false
+        }})
+
+    return results;
+}
+
 
 
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
 //Filter
+function problemSeven(){
+    let choice;
+    choice = prompt("Enter an ingredient")
+    let results;
+    results = dishes.filter(function(el){
+        if(el.ingredients.includes(choice)){
+            return true;
+        }
+        else{
+            return false
+        }})
+
+    return results;
+}
 
 
 
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
+ function problemEight(){
+     let listOfCuisineTypes = dishes.map(function(el){
+         return el.cuisine;
+     })
+     return listOfCuisineTypes;
+  }
 
 
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
+
 
 
 
