@@ -277,12 +277,32 @@ function problemSeven(){
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
-
+function problemNine(){
+    let specifiedCuisine = dishes.map(function(el){
+        return el.cuisine + " " + el.name;
+    })
+    return specifiedCuisine;
+}
 
 
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
+function problemTen(){
 
+    let results;
+    results = dishes.filter(function(el){
+        if(el.cuisine === "Vegetarian"){
+            return true;
+        }
+        else{
+            return false
+        }})
+
+    let finalResults = results.map(function(el){
+        return el.cuisine + " " + el.name
+    });
+    return finalResults
+}
 
 
 
@@ -290,10 +310,28 @@ function problemSeven(){
 //BONUS
 
 //8b. Use the filter method to eliminate duplicate from problem 8a.
+function problemEight(){
+    let listOfCuisineTypes = dishes.map(function(el){
+        return el.cuisine;
+    })
+    return listOfCuisineTypes.filter((item, index) => listOfCuisineTypes.indexof(item) === index);
+}
 
 //11. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
+function problemEleven(){
+    let results;
+    results = dishes.filter(function(el){
+        if(el.ingredients.includes("tomato")||el.ingredients.includes("cheese")){
+            return true;
+        }
+        else{
+            return false
+        }})
+
+    return results;
+}
 
 //12. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
