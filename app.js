@@ -142,6 +142,14 @@ console.log('mexicanFood from filterExample', mexicanFood)
 function problemOne(){
 
     let results;
+    results = dishes.filter (function(el){
+        console.log(el)
+if (el.cuisine === "Vegetarian"){
+    return true;
+}
+else{
+    return false;
+    }})
 
     return results;
 }
